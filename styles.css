@@ -1,5 +1,5 @@
 html {
-    background: rgb(110, 110, 110);
+    background: rgb(82, 82, 82);
 }
 
 body {
@@ -29,11 +29,16 @@ h2 {
     color: whitesmoke;
 }
 
+#char-length {
+    height: 30px;
+    text-align: center;
+}
+
 #generate-btn {
     background: #55F991;
     padding: 10px 20px;
     border-radius: 5px;
-    margin: 20px 0;
+    margin: 20px 50px 20px 0;
 }
 
 #output-container {

@@ -8,13 +8,14 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 // HTML Text
 let firstPassword = document.getElementById("password1")
 let secondPassword = document.getElementById("password2")
+let charLength = document.getElementById("char-length")
 
 // Strong Password generator function
 function generatePassword() {
     let pass1 = []
     let pass2 = []
 
-    for(let i = 0; i <= 13; i++)
+    for(let i = 0; i <= charLength.value - 1; i++)
     {
         let random1 = Math.floor(Math.random()*characters.length) + 1
         let random2 = Math.floor(Math.random()*characters.length) + 1
@@ -46,3 +47,29 @@ function copyPassword2() {
         alert("Text Copied to clipboard:", secondPassword.textContent);
     });
 }
+
+function checkLength() {
+    const inputField = document.getElementById("char-length");
+    const inputValue = inputField.value;
+
+    if (inputValue === "") {
+      alert("The field needs a value.");
+    } else if (inputValue > 25) {
+        alert("Too much!");
+    } else {
+      alert("The inputted value is: " + inputValue);
+    }
+  }
+
+  function checkLength2() {
+    const inputField = document.getElementById("char-length");
+    const inputValue = inputField.value;
+
+    if (inputValue === "")
+      alert("The field needs a value.");
+    else if (inputValue > 25) {
+        alert("Too much!");
+    } else {
+        generatePassword()
+    }
+  }
