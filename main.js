@@ -10,8 +10,8 @@ const htmlTag = `
 
             <section id="inputs-wrapper">
                 <button id="generate-btn" onclick="checkLength2()">Generate passwords</button>
+                <button id="char-length-btn" onclick="checkLength()">Enter</button>
                 <input type="number" placeholder="Enter character length" id="char-length">
-                <button id="char-length-btn" onclick="checkLength()">Enter character length</button>
             </section>
             
             <hr>
